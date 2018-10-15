@@ -28,6 +28,6 @@
     
   </agm-marker> -->
   <!--Testing-->
-  <agm-marker [latitude]="latC" [longitude]="lngC"></agm-marker>
+  <agm-marker [latitude]="latC" [longitude]="lngC" *ngIf="instruccion == 'Sitio'"></agm-marker>
   </agm-map>
 </ion-content>
