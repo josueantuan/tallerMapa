@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{instruccion}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15" (mapClick)="mapClicked($event)">
+    <agm-marker [latitude]="lat" [longitude]="lng"
+    *ngIf="instruccion == 'Marca'">
+    </agm-marker>
+    <agm-circle [latitude]="lat"[longitude]="lng"[circleDraggable]="false" [editable]="false" [fillColor]="blue" [radius]="900"
+    *ngIf="instruccion == 'Marca'">
+    </agm-circle>
+    <agm-direction [origin]="origin" [destination]="destination"
+    *ngIf="instruccion == 'Dirección'">
+    </agm-direction>
+    <!--      Marcador        -->
+    <agm-marker 
+    *ngFor="let m of markers; let i = index"
+    [latitude]="m.latC"
+    [longitude]="m.lngC"
+    [markerDraggable]="m.draggable"
+    >
+  </agm-marker>
+  </agm-map>
+</ion-content>
