@@ -18,13 +18,16 @@
     <agm-direction [origin]="origin" [destination]="destination"
     *ngIf="instruccion == 'Dirección'">
     </agm-direction>
-    <!--      Marcador        -->
+    <!--      Marcador       
     <agm-marker 
     *ngFor="let m of markers; let i = index"
     [latitude]="m.latC"
     [longitude]="m.lngC"
     [markerDraggable]="m.draggable"
     >
-  </agm-marker>
+    
+  </agm-marker> -->
+  <!--Testing-->
+  <agm-marker [latitude]="latC" [longitude]="lngC"></agm-marker>
   </agm-map>
 </ion-content>
