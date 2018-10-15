@@ -35,7 +35,7 @@ export class MapaPage {
   }
    
   getDirection() {
-    this.origin = { lat: this.lat, lng: this.lng }
+    this.origin = { lat: this.geoloca.latD, lng: this.geoloca.lngD }
     this.destination = { lat: -0.167765, lng: -78.489688 }
     
   }
